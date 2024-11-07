@@ -6,7 +6,6 @@
     <title>Checkout - SHOP</title>
     <link rel="shortcut icon" href="Images/logo/logo.png">
     <link rel="stylesheet" href="style.css">
-    <!-- <link rel="stylesheet" href="single_item.css"> -->
     <link rel="stylesheet" href="cart_page.css">
     <link rel="stylesheet" href="checkout.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -64,18 +63,16 @@
 
                 <div class="billing">
                     <h3>Billing Address</h3>
-                    <div class="billing-checkbox">
-                        <input type="checkbox" id="billing-check">
-                        <label for="billing-check" >Use Different Billing Address</label>
-                    </div>
+                    <input type="checkbox" id="billing-check">
+                    <span>Use Different Billing Address</span>
+                    <!-- <label for="billing-check" class="check-label">Use Different Billing Address</label> -->
                     <input type="text" placeholder="Address" id="address" required>
                     <input type="text" placeholder="City" id="city" required>
-                    <div class="address-info">
-                        <input type="text" class="state" placeholder="State/Province" required>
-                        <input type="text" class="zip" placeholder="Zip/Postal Code" required>    
+                    <div class="address-info" id="different-address">
+                        <input type="text"  id="diff-size" placeholder="State/Province" required>
+                        <input type="text"  id="diff-zip" placeholder="Zip/Postal Code" required>    
                     </div>
-
-                    <div class="selector-container">
+                    <div class="selector-container" id="country-cont">
                         <label for="country" id="country-label">Country</label>
                         <select name="country" id="country">
                             <option value="United States" selected>United States</option>

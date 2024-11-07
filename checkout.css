@@ -45,7 +45,7 @@ input:focus, select:focus{
     display: flex;
     justify-content: space-between;
 }
-.account-inf0 input{
+.account-info input{
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -60,25 +60,56 @@ input:focus, select:focus{
     flex-direction: column;
     font-size: 13px;
 }
-#country-label{
-    margin-left: 5px;
-    margin-top: 20px;
-}
-.billing-checkbox{
+#different-address{
     display: flex;
-    /* justify-content: center; */
-    align-items: center;
+    justify-content: space-between;
+}
+#diff-size, #diff-zip{
+    width: 40%;
+    border-bottom: 1px solid rgb(192, 189, 189);
+}
+#diff-zip{
+    margin-left: 13%;
+}
+#country-label{
+    margin-bottom: 10px;
+}
+#country-cont{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+#country-cont select{
+    width: 100%;
+}
+#address, #city,#different-address, #country-cont{
+    display: none;
+}
+#billing-check:checked ~ #address{
+    display: block;
+}
+#billing-check:checked ~ #city{
+    display: block;
+}
+#billing-check:checked ~ .address-info{
+    display: block;
+}
+#billing-check:checked ~ #country-cont{
+    display: block;
 }
 .billing-checkbox label{
     margin-left: 20px;
     font-size: 12px;
 }
+
 #billing-check{
     width: 20px;
     height: 20px;
     margin-bottom: 30px;
 }
-
+.payment-info input{
+    width: 100%;
+}
 .date-selector{
     margin-top: 10px;
     display: flex;
@@ -89,21 +120,24 @@ input:focus, select:focus{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 25%;
+    width: 35%;
 }
 .month-label{
     font-size: 15px;
 }
 .cvv{
-    width: 25%;
+    /* width: 10vw; */
     margin-bottom: 10px;
+    margin-left: 10%;
 }
 #year{
-    width: 25%;
+    width: 20vw;
+    margin-left: 10%;
 }
 #month{
-    width: 100%;
+    width: 15vw;
     font-size: 14px;
+    /* padding: 30px; */
 }
 .order-items{
     display: flex;
@@ -118,10 +152,21 @@ input:focus, select:focus{
     font-size: 13px;
     height:10vh; 
 }
+button{
+    padding: 20px;
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #172C50;
+    color: white;
+    border: none;
+}
 button:active{
     background-color: black;
     color: white;
 }
+
 @media(min-width: 768px){
     .container{
         text-align: center;

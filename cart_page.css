@@ -57,10 +57,12 @@ body{
     border-color: transparent;
     background-color: white;
     margin-left: 20px;
-    width: 30px;
+    margin-right: 20px;
+    width: 10px;
 }
 .item-size{
-    margin-left: 20px ;
+    margin-left: 30px ;
+    margin-right: 20px ;
 }
 .total-price{
     display: flex;
@@ -69,21 +71,24 @@ body{
     margin-top: 40px;
 }
 .total-price p{
-    margin-right: 30px;
+    margin: 45px;
     font-size: 13px;
     font-weight: 550;
     color: rgb(46, 45, 45);
 }
 
-button{
-    padding: 30px;
-    width: 100vw;
+.checkout-btn{
+    width: 100%;
+    padding: 10px;
     position: fixed;
     bottom: 0;
     left: 0;
     background-color: #172C50;
     color: white;
-    border-color: transparent;
+    font-size: 15px;
+}
+.made-by{
+    display: none;
 }
 .item-counter{
     padding: 5px;
@@ -95,7 +100,7 @@ button{
     top: 13px;
     right: 15px;
 }
-@media(min-width:365px){
+@media(min-width:430px){
     .item-detail{
         margin-left: 10px;
         grid-column: 2/3;
@@ -103,8 +108,6 @@ button{
         align-items: flex-start;
         text-align: start;
         color: rgb(126, 123, 123);
-        /* position: relative;
-        top: -30%; */
         position: static;
     }
     .item img{
@@ -112,9 +115,6 @@ button{
     }
 }
 @media(min-width: 768px){
-    .cart-box{
-        /* text-align: center; */
-    }
     .item{
         width: 100%;
     }
@@ -129,24 +129,28 @@ button{
     .item-detail{
         flex-direction: row;
         justify-content: space-evenly;
+        align-items: flex-start;
         position: relative;
         top: -38px;
         right: -20%;
         width: 70%;
     }
-
+    .item-size{
+        margin-left: 0px ;
+        margin-right: 0px ;
+    }
     .checkout-btn{
         position: static;
-        padding: 10px;
-        padding-left: 80px;
-        padding-right: 80px;
+        width: 150px;
         border: 2px solid black;
-        font-size: 17PX;
-        margin: 20PX;
+        font-size: 15PX;
+        background-color: white;
+        color: black;
     }
     .total-price{
-        margin: 0;
-        margin-right: 60px;
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 7vw;
     }
     .navbar{
         display: none;
@@ -155,7 +159,9 @@ button{
         margin-top: 50px;
         margin-bottom: 40px;
     }
-
+    .made-by{
+        display: block;
+    }
 }
 @media(min-width: 1024px){
     .item img{
