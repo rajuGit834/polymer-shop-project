@@ -40,7 +40,7 @@
                 <div class="account-info">
                     <h3>Account Information</h3>
                     <input type="email" placeholder="Email" required>
-                    <input type="number" placeholder="Phone Number" required>
+                    <input type="text" placeholder="Phone Number" required>
                 </div>
 
                <div class="shipping">
@@ -64,7 +64,7 @@
                 <div class="billing">
                     <h3>Billing Address</h3>
                     <input type="checkbox" id="billing-check">
-                    <span>Use Different Billing Address</span>
+                    <span class="billing-check-content">Use Different Billing Address</span>
                     <!-- <label for="billing-check" class="check-label">Use Different Billing Address</label> -->
                     <input type="text" placeholder="Address" id="address" required>
                     <input type="text" placeholder="City" id="city" required>
@@ -85,9 +85,9 @@
             <div class="payment-info">
                 <div class="payment-method">
                     <h3>Payment Method</h3>
-                    <input type="text" placeholder="Cardholder Name" required>
+                    <input type="text" class="card-info" placeholder="Cardholder Name" required>
                     
-                    <input type="number" placeholder="Card Number" required>
+                    <input type="text" class="card-info" placeholder="Card Number" required>
                     <div class="date-selector">
                         <div class="month-div">
                             <label for="month" class="month-label">Expiry</label>
@@ -104,7 +104,7 @@
                             <option value="2018">2018</option>
                         </select>
                       
-                        <input type="number" placeholder="CVV" class="cvv" required>
+                        <input type="text" placeholder="CVV" class="cvv" required>
                     
                     </div>
                 </div>
