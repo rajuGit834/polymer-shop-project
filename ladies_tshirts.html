@@ -9,22 +9,29 @@
 
 </head>
 <body>
-    <div class="container">
-        <div class="main-heading">
-            <a href="index.html" class="shop">S H O P</a>
-        </div>
-        <nav class="navbar">
+    <nav class="navbar">
+        <div class="nav-element">
+            <label for="check" id="checkbtn"><i style="font-size: 20px" class="fa">&#xf0c9;</i></label>
             <input type="checkbox" id="check">
-            <label for="check" id="checkbtn"><i style="font-size:20px" class="fa">&#xf0c9;</i></label>
             <label for="check" class="overlay"></label>
-            <div class="nav-element">
+            <div class="menu">
                 <a href="mens_outerwear.html">Men's Outerwear</a>
                 <a href="ladies_outerwear.html">Ladies Outerwear</a>
                 <a href="mens_tshirts.html">Men's T-Shirts</a>
                 <a href="ladies_tshirts.html" class="active">Ladies T-Shirts</a>
             </div>
-        </nav>
-        <a href="cart_page.html" class="cart"><i style="font-size:20px" class="fa cart">&#xf07a;</i></a>
+        </div>
+        <a href="index.html" class="shop"><b>S H O P</b></a>
+        <a href="cart_page.html" class="cart"><i style="font-size: 20px" class="fa cart">&#xf07a;</i></a>
+    </nav>
+
+    <nav class="navbar-max">
+        <a href="mens_outerwear.html">Men's Outerwear</a>
+        <a href="ladies_outerwear.html">Ladies Outerwear</a>
+        <a href="mens_tshirts.html">Men's T-Shirts</a>
+        <a href="ladies_tshirts.html" class="active">Ladies T-Shirts</a>
+    </nav>
+    <div class="container">
         <div class="box1 ladies-tshirts-box">
             <a href="ladies_tshirts.html"><img src="Images/Ladies-tshirts-Images/ladies_tshirts.jpg" alt="ladies_tshirts"></a>
         </div>
@@ -170,12 +177,11 @@
                 </li>                
             </ul>
         </div>
-
-        <div class="made-by">
-            <a href="#" class="polymer"><span>Made by Polymer</span></a>
-        </div>
-        <div>
-            <p class="footer">DEMO ONLY</p>
+    </div>
+    <div class="footer-demo">
+        <a href="#" class="polymer">Made by Polymer</a>
+        <div class="demo">
+            <p>DEMO ONLY</p>
         </div>
     </div>
 </body>
