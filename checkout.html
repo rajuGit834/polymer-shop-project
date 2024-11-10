@@ -6,7 +6,6 @@
     <title>Checkout - SHOP</title>
     <link rel="shortcut icon" href="Images/logo/logo.png">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="cart_page.css">
     <link rel="stylesheet" href="checkout.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -25,7 +24,7 @@
             </div>
         </div>
         <a href="index.html" class="shop"><b>S H O P</b></a>
-        <a href="cart_page.html" class="cart"><i style="font-size: 20px" class="fa cart">&#xf07a;</i></a>
+        <a href="cart.html" class="cart"><i style="font-size: 20px" class="fa cart">&#xf07a;</i></a>
     </nav>
 
     <nav class="navbar-max">
@@ -35,8 +34,6 @@
         <a href="ladies_tshirts.html">Ladies T-Shirts</a>
     </nav>
     <div class="container">
-        <div class="item-counter">4</div>
-
         <div class="heading-checkout">
             <p id="checkout-top-header">Checkout</p>
             <p class="span">Shop is a demo app - form data will not be sent</p>
@@ -46,18 +43,32 @@
             <div class="account">
                 <div class="account-info">
                     <h3>Account Information</h3>
-                    <input type="email" placeholder="Email" required>
-                    <input type="text" placeholder="Phone Number" required>
+                    
+                    <input type="email" id="email" class="emailInput" required>
+                    <label for="email" class="placeholder emailLable">Email</label>
+                    
+                    <input type="text" id="phone" class="phoneInput" required>
+                    <label for="phone" class="placeholder phoneLable">Phone Number</label>
                 </div>
 
                <div class="shipping">
                     <h3>Shipping Address</h3>
-                    <input type="text" placeholder="Address" required>
-                    <input type="text" placeholder="City" required>
+                    
+                    <input type="text" name="address" id="address" class="address-input" required>
+                    <label for="address" class="placeholder address-label">Address</label>
+
+                    <input type="text" id="city" class="city-input" required>
+                    <label for="city" class="placeholder city-label">City</label>
 
                     <div class="address-info">
-                        <input type="text" class="state" placeholder="State/Province" required> 
-                        <input type="text" class="zip" placeholder="Zip/Postal Code" required> 
+                        <div class="state-div">
+                            <input type="text" class="state state-input" id="states" required> 
+                            <label for="states" id="statesInner" class="placeholder state-label">State/Province</label>
+                        </div>
+                        <div class="state-div">
+                            <input type="text" class="zip" id="zipCode" required> 
+                            <label for="zipCode" class="placeholder zipCode">Zip/Postel Code</label>
+                        </div>
                     </div>
                     <div class="selector-container">
                         <label for="country" id="country-label">Country</label>
@@ -72,13 +83,25 @@
                     <h3>Billing Address</h3>
                     <input type="checkbox" id="billing-check">
                     <span class="billing-check-content">Use Different Billing Address</span>
-                    <!-- <label for="billing-check" class="check-label">Use Different Billing Address</label> -->
-                    <input type="text" placeholder="Address" id="address" required>
-                    <input type="text" placeholder="City" id="city" required>
+    
+                    <input type="text" id="addr" required>
+                    <label for="addr" class="placeholder" id="addrId">Address</label>
+
+                    <input type="text" id="cityBilling" required>
+                    <label for="cityBilling" id="cityBillingLabel" class="placeholder">City</label>
+                    
                     <div class="address-info" id="different-address">
-                        <input type="text"  id="diff-size" placeholder="State/Province" required>
-                        <input type="text"  id="diff-zip" placeholder="Zip/Postal Code" required>    
-                    </div>
+                        <div class="state-div">
+                            <input type="text"  class="diff-size" id="state" required>
+                            <div class="divv">
+                                <label for="state" class="placeholder diff-size-label">State/Province</label>
+                            </div>
+                        </div>
+                        <div class="zip-div">
+                            <input type="text" class="diff-zip" id="zip" required>
+                            <label for="zip" class="placeholder zipCode" id="zip2">Zip/Postal Code</label>
+                        </div>    
+                    </div> 
                     <div class="selector-container" id="country-cont">
                         <label for="country" id="country-label">Country</label>
                         <select name="country" id="country">
@@ -92,9 +115,13 @@
             <div class="payment-info">
                 <div class="payment-method">
                     <h3>Payment Method</h3>
-                    <input type="text" class="card-info" placeholder="Cardholder Name" required>
+
+                    <input type="text" class="card-info cardName" id="cardholderName" required>
+                    <label for="cardholderName" id="cardholderNameLabel" class="placeholder cardNameLabel">Cardholder Name</label>
+
+                    <input type="text" class="card-info" id="cardNumber" required>
+                    <label for="cardNumber" id="cardNumberLabel" class="placeholder">Card Number</label>
                     
-                    <input type="text" class="card-info" placeholder="Card Number" required>
                     <div class="date-selector">
                         <div class="month-div">
                             <label for="month" class="month-label">Expiry</label>
@@ -105,13 +132,17 @@
                             </select>
                         </div>
                            
-                        <select name="year" id="year">
-                            <option value="2016" selected>2016</option>
-                            <option value="2017">2017</option>
-                            <option value="2018">2018</option>
-                        </select>
-                      
-                        <input type="text" placeholder="CVV" class="cvv" required>
+                        <div class="year-div">
+                            <select name="year" id="year">
+                                <option value="2016" selected>2016</option>
+                                <option value="2017">2017</option>
+                                <option value="2018">2018</option>
+                            </select>
+                        </div>
+                        <div class="cvv-div">
+                            <input type="text" id="cvv" required>
+                            <label for="cvv" id="cvvLabel" class="placeholder">C V V</label>
+                        </div>
                     
                     </div>
                 </div>

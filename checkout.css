@@ -14,7 +14,7 @@
 .account-info, .shipping, .billing, .payment-info{
     text-align: start;
     font-size: 11px;
-    margin-top: 30px;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
 }
@@ -22,25 +22,41 @@
 input{
     border: none;
     outline: none;
-    margin-top: 30px;
+    margin-top: 20px;
     margin-bottom: 10px; 
-    padding: 10px;
     font-size: 15px;
     border-bottom: 1px solid rgb(192, 189, 189);
     padding-left: 0;
 }
 select{
-    margin-top: 30px;
+    margin-top: 20px;
     margin-bottom: 10px;
     border: none;
     outline: none;
     background-color: white;
-    font-size: 15px;
+    font-size: 16px;
     border-bottom: 1px solid rgb(192, 189, 189);
+    color: rgb(119, 117, 117);
 }
 input:focus, select:focus{
     border-bottom: 2px solid black;
 }
+.state-div input:focus + label{
+    transform: translateY(-20px);
+    transition: 0.2s;   
+}
+.placeholder{
+    font-size: 14px;
+    position: relative;
+    top: -30px;
+    color: rgb(119, 117, 117);
+}
+
+input:focus + label{
+    transform: translateY(-20px);
+    transition: 0.2s;   
+}
+
 .address-info{
     display: flex;
     justify-content: space-between;
@@ -51,7 +67,7 @@ input:focus, select:focus{
     width: 100%;
 }
 .state, .zip{
-    width: 40%;
+    width: 95%;
     border-bottom: 1px solid rgb(192, 189, 189);
 }
 
@@ -64,9 +80,12 @@ input:focus, select:focus{
     display: flex;
     justify-content: space-between;
 }
+.state-div{
+    margin-top: 20px;
+}
 
-#diff-size, #diff-zip{
-    width: 35%;
+.diff-size, .diff-zip{
+    width: 95%;
     border-bottom: 1px solid rgb(192, 189, 189);
 }
 #diff-zip{
@@ -83,24 +102,25 @@ input:focus, select:focus{
 #country-cont select{
     width: 100%;
 }
-#address, #city,#different-address, #country-cont{
+#addr, #addrId, 
+#cityBilling, 
+#cityBillingLabel,
+#different-address, #country-cont{
     display: none;
 }
-#billing-check:checked ~ #address{
-    display: block;
-}
-#billing-check:checked ~ #address:hover{
-    border-bottom: 2px solid black;
-}
-#billing-check:checked ~ #city{
-    display: block;
-}
-#billing-check:checked ~ .address-info{
-    display: block;
-}
+#billing-check:checked ~ #addrId,
+#billing-check:checked ~ #addr,
+#billing-check:checked ~ #cityBilling,
+#billing-check:checked ~ #cityBillingLabel,
+#billing-check:checked ~ #dicityBillingLabel,
+#billing-check:checked ~ #address,
+#billing-check:checked ~ #address:hover,
+#billing-check:checked ~ .address-info,
 #billing-check:checked ~ #country-cont{
     display: block;
 }
+
+
 .billing-checkbox label{
     margin-left: 20px;
     font-size: 12px;
@@ -120,30 +140,40 @@ input:focus, select:focus{
 .date-selector{
     margin-top: 10px;
     display: flex;
-    width: 100%;
     justify-content: space-between;
+    align-items: center;
 }
 .month-div{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 35%;
+    width: 30%;
+}
+.year-div{
+    width: 30%;
 }
 .month-label{
     font-size: 15px;
 }
-.cvv{
-    margin-bottom: 10px;
-    margin-left: 10%;
+.cvv-div{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin-top: 37px;
+}
+
+#email, #address, #addr, #cardholderName{
+    margin-top: 40px;
 }
 #year{
-    width: 20vw;
-    margin-left: 10%;
+    margin-top: 40px;
+    width: 100%;
 }
 #month{
-    width: 100px;
-    font-size: 14px;
+    width: 100%;
+    font-size: 16px;
 }
+
 .order-items{
     display: flex;
     justify-content: space-between;
@@ -171,6 +201,9 @@ button:active{
     background-color: black;
     color: white;
 }
+.footer-demo{
+    display: none;
+}
 
 @media(min-width: 768px){
     .container{
@@ -184,9 +217,9 @@ button:active{
     }
     #checkout-top-header{
         font-size: 20px;
-        margin-top: 80px;
         font-weight: 400;
         font-size: 16px;
+        margin-top: 40px;
     }
     .account{
         display: flex;
@@ -207,5 +240,19 @@ button:active{
         padding: 8px;
         padding-left: 70px;
         padding-right: 150px;
+    }
+    .navbar-max{
+        display: none;
+    }
+    .footer-demo{
+        display: block;
+        position: relative;
+        bottom: -10vh;
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
