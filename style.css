@@ -87,6 +87,7 @@ img{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    margin-top: 20px;
 }
 .box3{
     display: flex;
@@ -115,7 +116,13 @@ img{
     margin-top: 10px;
     margin-bottom: 35px;
 }
-.shopNow-inner-btn{
+.shop-now-div{
+    border: 2px solid black;
+    padding: 10px 30px;
+
+}
+
+/* .shopNow-inner-btn{
     padding: 10px;
     padding-left: 20px;
     padding-right: 20px;
@@ -132,7 +139,7 @@ img{
     margin-bottom: 20px;
     border: 2px solid black;
     cursor: pointer;
-}
+} */
 .inner-btn {
     padding: 7px 20px;
     border: 2px solid black;

@@ -6,7 +6,7 @@
     <title>Checkout - SHOP</title>
     <link rel="shortcut icon" href="Images/logo/logo.png">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="checkout.css">
+    <link rel="stylesheet" href="checkoutPage.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -61,14 +61,10 @@
                     <label for="city" class="placeholder city-label">City</label>
 
                     <div class="address-info">
-                        <div class="state-div">
-                            <input type="text" class="state state-input" id="states" required> 
-                            <label for="states" id="statesInner" class="placeholder state-label">State/Province</label>
-                        </div>
-                        <div class="state-div">
-                            <input type="text" class="zip" id="zipCode" required> 
-                            <label for="zipCode" class="placeholder zipCode">Zip/Postel Code</label>
-                        </div>
+                        <input type="text" class="state state-input" id="states" required> 
+                        <label for="states" id="statesInner" class="state-label">State/Province</label>
+                        <input type="text" class="zip" id="zipCode" required> 
+                        <label for="zipCode" class="zipCode">Zip/PostelCode</label>
                     </div>
                     <div class="selector-container">
                         <label for="country" id="country-label">Country</label>
@@ -90,7 +86,19 @@
                     <input type="text" id="cityBilling" required>
                     <label for="cityBilling" id="cityBillingLabel" class="placeholder">City</label>
                     
-                    <div class="address-info" id="different-address">
+                    <input type="text" class="state2 different-address" id="st" required> 
+                    <label for="st" id="statesInner" class="inner-state different-address">State/Province</label>
+                    <input type="text" class="zip2 different-address" id="text" required> 
+                    <label for="text" class="inner-zip different-address">Zip/PostelCode</label>
+
+                    <!-- <div id="different-address">
+                        <input type="text" class="state2" id="st" required> 
+                        <label for="st" id="statesInner" class="state-label inner-state">State/Province</label>
+                        <input type="text" class="zip2" id="text" required> 
+                        <label for="text" class="zipCode inner-zip">Zip/PostelCode</label>
+                    </div> -->
+
+                    <!-- <div class="address-info" id="different-address">
                         <div class="state-div">
                             <input type="text"  class="diff-size" id="state" required>
                             <div class="divv">
@@ -101,7 +109,7 @@
                             <input type="text" class="diff-zip" id="zip" required>
                             <label for="zip" class="placeholder zipCode" id="zip2">Zip/Postal Code</label>
                         </div>    
-                    </div> 
+                    </div>  -->
                     <div class="selector-container" id="country-cont">
                         <label for="country" id="country-label">Country</label>
                         <select name="country" id="country">
@@ -111,16 +119,13 @@
                     </div>
                 </div>
             </div>
-
             <div class="payment-info">
                 <div class="payment-method">
                     <h3>Payment Method</h3>
-
                     <input type="text" class="card-info cardName" id="cardholderName" required>
-                    <label for="cardholderName" id="cardholderNameLabel" class="placeholder cardNameLabel">Cardholder Name</label>
-
+                    <label for="cardholderName" id="cardholderNameLabel" class="placeholder1">Cardholder Name</label>
                     <input type="text" class="card-info" id="cardNumber" required>
-                    <label for="cardNumber" id="cardNumberLabel" class="placeholder">Card Number</label>
+                    <label for="cardNumber" id="cardNumberLabel" class="placeholder2">Card Number</label>
                     
                     <div class="date-selector">
                         <div class="month-div">

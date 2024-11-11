@@ -27,6 +27,7 @@ input{
     font-size: 15px;
     border-bottom: 1px solid rgb(192, 189, 189);
     padding-left: 0;
+    cursor: text;
 }
 select{
     margin-top: 20px;
@@ -38,47 +39,76 @@ select{
     border-bottom: 1px solid rgb(192, 189, 189);
     color: rgb(119, 117, 117);
 }
-input:focus, select:focus{
-    border-bottom: 2px solid black;
-}
-.state-div input:focus + label{
-    transform: translateY(-20px);
-    transition: 0.2s;   
-}
-.placeholder{
+.placeholder, .placeholder1, .placeholder2{
     font-size: 14px;
     position: relative;
     top: -30px;
     color: rgb(119, 117, 117);
 }
-
-input:focus + label{
+.input{
+    position: relative;
+}
+input:focus{
+    border-bottom: 2px solid black;
+}
+input:focus + label,
+input:valid + label{
     transform: translateY(-20px);
     transition: 0.2s;   
 }
+
+#cardholderName:focus ~ .placeholder1,
+#cardholderName:valid ~ .placeholder1,
+#cardNumber:focus ~ .placeholder2,
+#cardNumber:valid ~ .placeholder2{
+    position: relative;
+    top: -3rem;
+    transition: 0.2s ease-out;
+}
+
 
 .address-info{
     display: flex;
     justify-content: space-between;
 }
+/* #different-address{
+    display: flex;
+    justify-content: space-between;
+} */
 .account-info input{
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 .state, .zip{
-    width: 95%;
+    width: 45%;
     border-bottom: 1px solid rgb(192, 189, 189);
+}
+.state2, .zip2{
+    width: 100%;
+}
+.state-label, .zipCode{
+    font-size: 14px;
+    color: rgb(119, 117, 117);
+    position: relative;
+    left: -48%;
+    top: 15px;
+    width: 0;
+}
+
+.inner-state, .inner-zip{
+    font-size: 14px;
+    color: rgb(119, 117, 117);
+    position: relative;
+    top: -35px;
+    width: 0;
+    font-size: 15px;
 }
 
 .selector-container{
     display: flex;
     flex-direction: column;
     font-size: 13px;
-}
-#different-address{
-    display: flex;
-    justify-content: space-between;
 }
 .state-div{
     margin-top: 20px;
@@ -105,7 +135,7 @@ input:focus + label{
 #addr, #addrId, 
 #cityBilling, 
 #cityBillingLabel,
-#different-address, #country-cont{
+.different-address, #country-cont{
     display: none;
 }
 #billing-check:checked ~ #addrId,
@@ -116,7 +146,8 @@ input:focus + label{
 #billing-check:checked ~ #address,
 #billing-check:checked ~ #address:hover,
 #billing-check:checked ~ .address-info,
-#billing-check:checked ~ #country-cont{
+#billing-check:checked ~ #country-cont,
+#billing-check:checked ~ .different-address{
     display: block;
 }
 
